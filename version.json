@@ -1,0 +1,10 @@
+{
+    "version": "1.0.0",
+    "download_url": "https://github.com/PRATHVI9607/speechToText/releases/latest/download/SpeechToText_Setup.exe",
+    "changelog": [
+        "Initial release",
+        "Real-time speech recognition",
+        "Professional UI with animations",
+        "Continuous recording support"
+    ]
+}

@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('startButton');
     const resetButton = document.getElementById('resetButton');
+    const exportButton = document.getElementById('exportButton');
+    const checkUpdateButton = document.getElementById('checkUpdateButton');
     const copyButton = document.getElementById('copyButton');
     const output = document.getElementById('output');
     const musicBox = document.querySelector('.music-box');
@@ -162,11 +164,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    resetButton.addEventListener('click', () => {
+        resetButton.addEventListener('click', () => {
+        output.textContent = '';
         transcriptHistory = '';
-        output.textContent = 'Your words will appear here...';
-        resetButton.classList.add('active');
-        setTimeout(() => resetButton.classList.remove('active'), 200);
+    });
+
+    exportButton.addEventListener('click', async () => {
+        try {
+            const response = await fetch('/export', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    text: output.textContent
+                })
+            });
+            
+            const data = await response.json();
+            if (data.success) {
+                alert(`Text exported successfully!
+Saved to: ${data.path}\${data.filename}`);
+            } else {
+                alert('Failed to export text: ' + data.error);
+            }
+        } catch (error) {
+            alert('Failed to export text: ' + error.message);
+        }
+    });
+
+    checkUpdateButton.addEventListener('click', () => {
+        fetch('/check_update')
+            .catch(error => console.error('Failed to check for updates:', error));
     });
 
     copyButton.addEventListener('click', () => {

@@ -231,8 +231,8 @@ h1 {
 }
 
 .control-btn {
-    min-width: 160px;
-    padding: 1rem 2rem;
+    min-width: 140px;
+    padding: 1rem 1.5rem;
     border: none;
     border-radius: 12px;
     font-size: 1.1rem;
@@ -247,6 +247,7 @@ h1 {
     overflow: hidden;
     letter-spacing: 0.3px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem;
 }
 
 .primary-btn {
@@ -281,6 +282,48 @@ h1 {
         0 6px 16px rgba(71, 85, 105, 0.25),
         0 4px 8px rgba(71, 85, 105, 0.15);
     background: linear-gradient(135deg, #728399 0%, #526171 100%);
+}
+
+.export-btn {
+    background: linear-gradient(135deg, #38A169 0%, #2F855A 100%);
+    color: white;
+    box-shadow: 
+        0 4px 12px rgba(56, 161, 105, 0.2),
+        0 2px 4px rgba(56, 161, 105, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.export-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 16px rgba(56, 161, 105, 0.25),
+        0 4px 8px rgba(56, 161, 105, 0.15);
+    background: linear-gradient(135deg, #48BB78 0%, #38A169 100%);
+}
+
+.update-btn {
+    background: linear-gradient(135deg, #6B46C1 0%, #553C9A 100%);
+    color: white;
+    box-shadow: 
+        0 4px 12px rgba(107, 70, 193, 0.2),
+        0 2px 4px rgba(107, 70, 193, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.update-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 16px rgba(107, 70, 193, 0.25),
+        0 4px 8px rgba(107, 70, 193, 0.15);
+    background: linear-gradient(135deg, #805AD5 0%, #6B46C1 100%);
+}
+
+.version-info {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    opacity: 0.8;
 }
 
 .control-btn::before {

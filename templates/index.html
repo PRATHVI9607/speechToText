@@ -6,6 +6,7 @@
     <title>Voice to Text - Modern Theme</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="morning-rays"></div>
@@ -40,14 +41,23 @@
             <div class="controls-container">
                 <div class="controls">
                     <button id="startButton" class="control-btn primary-btn">
-                        <span class="btn-icon">🎤</span>
+                        <i class="fas fa-microphone"></i>
                         <span class="btn-text">Start Speaking</span>
                     </button>
                     <button id="resetButton" class="control-btn reset-btn">
-                        <span class="btn-icon">🔄</span>
+                        <i class="fas fa-undo"></i>
                         <span class="btn-text">Reset</span>
                     </button>
+                    <button id="exportButton" class="control-btn export-btn">
+                        <i class="fas fa-file-export"></i>
+                        <span class="btn-text">Export</span>
+                    </button>
+                    <button id="checkUpdateButton" class="control-btn update-btn">
+                        <i class="fas fa-sync"></i>
+                        <span class="btn-text">Check Updates</span>
+                    </button>
                 </div>
+                <div class="version-info">Version {{ version }}</div>
             </div>
 
             <div class="output-container">

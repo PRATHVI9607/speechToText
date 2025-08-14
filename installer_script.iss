@@ -28,8 +28,6 @@ OutputBaseFilename=SpeechToText_Setup
 Compression=lzma2/ultra64
 SolidCompression=yes
 WizardStyle=modern
-WizardImageFile=compiler:WizModernImage-IS.bmp
-WizardSmallImageFile=compiler:WizModernSmallImage-IS.bmp
 SetupIconFile=static\favicon.ico
 
 ; Windows settings
@@ -53,8 +51,9 @@ Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescrip
 
 [Files]
 ; Main application files
-Source: "dist\SpeechToText\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "dist\SpeechToText\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "dist\SpeechToText.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "static\*"; DestDir: "{app}\static"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "templates\*"; DestDir: "{app}\templates"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "README.md"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

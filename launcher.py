@@ -1,16 +1,24 @@
 import os
 import sys
 import webbrowser
+import threading
 from threading import Timer
 from flask import Flask
 from waitress import serve
 
-# Import your Flask app
+# Import your Flask app and update checker
 from app import app
+from update_checker import check_for_updates
+
+def check_updates_async():
+    """Check for updates in the background"""
+    threading.Thread(target=lambda: check_for_updates(silent=True)).start()
 
 def open_browser():
     """Open the default web browser to the Flask application."""
     webbrowser.open('http://localhost:5000/')
+    # Check for updates after opening browser
+    Timer(2, check_updates_async).start()
 
 def run_app():
     """Run the Flask application with a production server."""
