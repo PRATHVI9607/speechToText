@@ -2,7 +2,15 @@
 
 A powerful and user-friendly speech recognition application that converts your spoken words into text in real-time.
 
-## Development Setup
+## Installation Instructions
+
+### Method 1: Using the Installer (Recommended)
+1. Download `SpeechToText_Setup.exe` from the [latest release](https://github.com/PRATHVI9607/speechToText/releases/latest)
+2. Double-click the installer to run it
+3. Follow the installation wizard
+4. Launch "Speech To Text" from your Start menu or desktop shortcut
+
+### Method 2: Development Setup
 
 1. Install Python 3.12 or later from https://www.python.org/downloads/
 2. Install required packages:
