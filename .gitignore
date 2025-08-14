@@ -1,0 +1,46 @@
+# Python virtual environment
+venv/
+env/
+ENV/
+.env/
+.venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+.DS_Store
+
+# Flask specific
+instance/
+.webassets-cache
+
+# Environment variables
+.env
+.flaskenv
+
+# Logs
+*.log
+
+# Database
+*.db
+*.sqlite3
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
