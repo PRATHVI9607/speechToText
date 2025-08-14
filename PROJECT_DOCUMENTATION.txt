@@ -1,0 +1,240 @@
+# Speech-to-Text Application Documentation
+
+[Previous sections remain the same...]
+
+2. Backend (app.py)
+   - Flask web server
+   - Speech recognition processing
+   - API endpoints for handling audio data
+   - WebSocket server implementation
+   - Error handling and logging systems
+
+3. Supporting Modules
+   - launcher.py: Application entry point and process management
+   - update_checker.py: Version control and update system
+   - version.json: Version tracking and compatibility checks
+
+## Development and Testing
+
+### Development Environment Setup
+1. Required Tools
+   - Python 3.x development environment
+   - Git for version control
+   - VS Code or preferred IDE
+   - Node.js for frontend development
+   - PyInstaller for executable creation
+   - Inno Setup for installer creation
+
+2. Configuration Files
+   - requirements.txt: Python package dependencies
+   - .gitignore: Source control exclusions
+   - SpeechToText.spec: PyInstaller configuration
+   - installer_script.iss: Installer settings
+
+### Testing Framework
+1. Unit Testing
+   - Test coverage for core functions
+   - Audio processing validation
+   - Text conversion accuracy testing
+   - Error handling verification
+
+2. Integration Testing
+   - End-to-end workflow testing
+   - WebSocket connection testing
+   - Frontend-Backend integration
+   - Resource management validation
+
+3. Performance Testing
+   - Load testing with multiple users
+   - Memory usage monitoring
+   - CPU utilization tracking
+   - Network performance testing
+
+## Deployment
+
+### Build Process
+1. Pre-build Steps
+   - Update version information
+   - Clean build directories
+   - Run test suite
+   - Update documentation
+
+2. Build Steps
+   - Generate Python executable
+   - Package frontend resources
+   - Create installer package
+   - Sign executables (if applicable)
+
+3. Post-build Validation
+   - Installation testing
+   - Functionality verification
+   - Resource usage checking
+   - Update system testing
+
+### Distribution
+1. Release Management
+   - Version tagging
+   - Release notes generation
+   - Binary distribution
+   - Update server synchronization
+
+2. Update System
+   - Version checking mechanism
+   - Delta updates when possible
+   - Rollback capability
+   - Update verification
+
+## Maintenance
+
+### Regular Maintenance Tasks
+1. Code Updates
+   - Security patches
+   - Bug fixes
+   - Performance optimizations
+   - Feature updates
+
+2. System Monitoring
+   - Error log analysis
+   - Performance metrics tracking
+   - User feedback collection
+   - Resource usage monitoring
+
+### Troubleshooting Guide
+1. Common Issues
+   - Audio capture problems
+   - Recognition accuracy issues
+   - Network connectivity problems
+   - Resource allocation errors
+
+2. Resolution Steps
+   - Diagnostic procedures
+   - Log analysis methods
+   - Configuration checks
+   - Recovery procedures
+
+## Security
+
+### Data Security
+1. Audio Data
+   - Secure transmission protocols
+   - Local processing priority
+   - Data encryption in transit
+   - No permanent storage of audio
+
+2. User Privacy
+   - No personal data collection
+   - Anonymous usage statistics
+   - Transparent data handling
+   - GDPR compliance measures
+
+### System Security
+1. Application Security
+   - Input validation
+   - Error handling
+   - Resource access control
+   - Secure update system
+
+2. Network Security
+   - Secure WebSocket connections
+   - SSL/TLS implementation
+   - DOS protection
+   - Rate limiting
+
+## User Guide
+
+### Getting Started
+1. Installation
+   - System requirements
+   - Installation steps
+   - First-time setup
+   - Configuration options
+
+2. Basic Usage
+   - Starting the application
+   - Recording audio
+   - Viewing results
+   - Saving output
+
+3. Advanced Features
+   - Custom configurations
+   - Keyboard shortcuts
+   - Export options
+   - Troubleshooting tools
+
+## API Documentation
+
+### WebSocket API
+1. Connection
+   - Endpoint specifications
+   - Authentication methods
+   - Connection maintenance
+   - Error handling
+
+2. Messages
+   - Message formats
+   - Data structures
+   - Status codes
+   - Response types
+
+### REST API
+1. Endpoints
+   - Version information
+   - Status checking
+   - Configuration
+   - Maintenance functions
+
+2. Authentication
+   - Token management
+   - Access control
+   - Rate limiting
+   - Security measures
+
+## Future Development
+
+### Planned Features
+1. Technical Enhancements
+   - Multi-language support
+   - Improved accuracy
+   - Better noise handling
+   - Faster processing
+
+2. User Experience
+   - Enhanced UI/UX
+   - More export options
+   - Custom dictionaries
+   - User profiles
+
+### Roadmap
+1. Short-term Goals
+   - Performance optimization
+   - Bug fixes
+   - Minor feature additions
+   - Documentation updates
+
+2. Long-term Vision
+   - Platform expansion
+   - Cloud integration
+   - API enhancement
+   - Enterprise features
+
+## Support
+
+### User Support
+1. Documentation
+   - User manual
+   - FAQ section
+   - Troubleshooting guide
+   - Video tutorials
+
+2. Technical Support
+   - Issue reporting
+   - Feature requests
+   - Bug tracking
+   - Community forums
+
+### Contact Information
+- GitHub Repository: https://github.com/PRATHVI9607/speechToText
+- Issue Tracker: GitHub Issues
+- Documentation: Project Wiki
+- Support Email: rakshaksujith@gmail.com
+
