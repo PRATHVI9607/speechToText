@@ -1,0 +1,151 @@
+﻿# Linux Installation and Execution Guide for Speech-to-Text Application
+
+## System Requirements
+- Ubuntu 20.04 or later (or other Linux distributions)
+- Python 3.8 or higher
+- 4GB RAM minimum
+- Microphone access
+- Internet connection (for initial setup)
+
+## Pre-Installation Steps
+
+1. Update System Packages:
+```bash
+sudo apt update
+sudo apt upgrade -y
+```
+
+2. Install Required System Dependencies:
+```bash
+# Install basic dependencies
+sudo apt install -y python3-pip python3-venv git
+
+# Install audio dependencies
+sudo apt install -y portaudio19-dev python3-pyaudio
+
+# Install SSL for secure connections
+sudo apt install -y libssl-dev
+
+# Install additional required libraries
+sudo apt install -y build-essential libffi-dev python3-dev libasound2-dev
+```
+
+## Installation Process
+
+1. Clone the Repository:
+```bash
+# Create directory for the application
+mkdir -p ~/speech-to-text
+cd ~/speech-to-text
+
+# Clone the repository
+git clone https://github.com/PRATHVI9607/speechToText.git .
+```
+
+2. Set Up Python Virtual Environment:
+```bash
+# Create virtual environment
+python3 -m venv venv
+
+# Activate virtual environment
+source venv/bin/activate
+
+# Upgrade pip
+pip install --upgrade pip
+```
+
+3. Install Python Dependencies:
+```bash
+# Install required Python packages
+pip install -r requirements.txt
+
+# Verify installations
+pip list
+```
+
+## Running the Application
+
+1. Basic Execution:
+```bash
+# Make sure you are in the application directory
+cd ~/speech-to-text
+
+# Activate virtual environment (if not already activated)
+source venv/bin/activate
+
+# Run the application
+python3 launcher.py
+```
+
+2. Access the Application:
+- Open web browser
+- Navigate to: http://localhost:5000
+
+## Troubleshooting
+
+1. Audio Issues:
+```bash
+# Check audio devices
+pulseaudio --check
+arecord -l
+arecord -L
+
+# Test microphone
+arecord -d 5 test.wav
+aplay test.wav
+```
+
+2. Permission Issues:
+```bash
+# Fix directory permissions
+sudo chown -R $(whoami):$(whoami) ~/speech-to-text
+
+# Fix audio group
+sudo usermod -a -G audio $(whoami)
+```
+
+3. Common Problems:
+
+   a. If microphone is not working:
+   - Check if user is in audio group
+   - Verify microphone is not muted in system settings
+   - Test with arecord command
+
+   b. If application will not start:
+   - Check Python virtual environment is activated
+   - Verify all dependencies are installed
+   - Check port 5000 is not in use
+
+## Maintenance
+
+1. Update Application:
+```bash
+cd ~/speech-to-text
+source venv/bin/activate
+git pull origin main
+pip install -r requirements.txt
+```
+
+2. Backup Configuration:
+```bash
+cp config.json config.json.backup
+pip freeze > requirements.backup.txt
+```
+
+## Uninstallation
+
+To remove the application:
+```bash
+# Remove application directory
+rm -rf ~/speech-to-text
+
+# Remove audio packages (optional)
+sudo apt remove -y portaudio19-dev python3-pyaudio
+```
+
+## Support
+
+For issues and support:
+1. Check the troubleshooting section above
+2. Visit our GitHub repository: https://github.com/PRATHVI9607/speechToText
+3. Submit issues on GitHub for technical problems
